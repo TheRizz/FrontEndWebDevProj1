@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(/images/bgi.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.btn{
+    color: #fff;
+    border: none;
+    margin: 20px;
+    padding: 20px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+
+.btn-create{
+    background: #2edfe8;
+    box-shadow: 0 0 25px #2edfe8;
+
+}
+
+.btn-create:hover{
+    box-shadow: 0 0 5px #2edfe8,
+                0 0 25px #2edfe8,
+                0 0 50px #2edfe8,
+                0 0 100px #2edfe8
+    
+}
+
+.btn-take{
+    background: #22c954;
+    box-shadow: 0 0 25px #22c954;
+
+}
+
+.btn-take:hover{
+    box-shadow: 0 0 5px #22c954,
+                0 0 25px #22c954,
+                0 0 50px #22c954,
+                0 0 100px #22c954
+    
+}
+
+.btn-mine{
+    background: #d11e1b;
+    box-shadow: 0 0 25px #d11e1b;
+
+}
+
+.btn-mine:hover{
+    box-shadow: 0 0 5px #d11e1b,
+                0 0 25px #d11e1b,
+                0 0 50px #d11e1b,
+                0 0 100px #d11e1b
+    
+}
+
+.btn-logoff{
+    background: #d4cc39;
+    box-shadow: 0 0 25px #d4cc39;
+
+}
+
+.btn-logoff:hover{
+    box-shadow: 0 0 5px #d4cc39,
+                0 0 25px #d4cc39,
+                0 0 50px #d4cc39,
+                0 0 100px #d4cc39
+    
+}
