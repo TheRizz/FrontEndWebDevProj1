@@ -6,7 +6,7 @@
 .hero{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(/images/bgi.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(../images/bgi.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -19,8 +19,8 @@
 }
 
 .container h1{
-    padding-top: 260px;
-    padding-bottom: 0;
+    padding-top: 100px;
+    padding-bottom: 20px;
     font-size: 55px;
 }
 
@@ -54,4 +54,34 @@
     border-radius: 30px !important;
     box-shadow: none;
 
+}
+
+a{
+    font-size: 40px;
+    color: lightblue;
+}
+
+ul{
+    list-style: none;
+    overflow-y: auto;
+    height: 25em;
+    width: fit-content;
+    margin: auto;
+    padding: 0px 100px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c2c2c2;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
 }

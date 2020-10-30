@@ -82,9 +82,12 @@ class RemoteDataStore {
     }
 
     async getAll() {
-        console.log('Retrieving all orders');
-        const ordersRef = this.db.collection('Quizzes');
-        const snapshot = await ordersRef.get();
-        return snapshot.docs.map(doc => doc.data());
+        console.log('Retrieving all quizzes');
+        this.db.collection("Quizzes").get().then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+                addQuiz(doc.id);
+                console.log(doc.id, " => ", doc.data());
+            });
+        });
     }
 }
