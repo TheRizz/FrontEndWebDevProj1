@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/create_style.css">
+</head>
+<body>
+
+    <section>
+
+        <div class="container">
+
+            <form >
+                <div class="title">Quiz Creation</div>
+
+                <div class="step step-1 index active" >
+                    <div class="form-group">
+                <label for="QuizName">Quiz Name</label>
+                        <input type="text" id="QuizName" name ="QuizName">
+                    </div>
+                    <div class="form-group">
+                        <label for="Character1">Character 1</label>
+                        <input type="text" id="Character1" name ="Character1">
+                    </div>
+                    <div class="form-group">
+                        <label for="Character2">Character 2</label>
+                        <input type="text" id="Character2" name ="Character2">
+                    </div>
+                    <div class="form-group">
+                        <label for="Character3">Character 3</label>
+                        <input type="text" id="Character3" name ="Character3">
+                    </div>
+                    <div class="form-group">
+                        <label for="Character4">Character 4</label>
+                        <input type="text" id="Character4" name ="Character4">
+                    </div>
+                    <button type="button" class="next-btn">Next</button>
+                    <button type="button" class="return-btn" onclick="location.href='home.html';">Return Home</button>
+                </div>
+
+
+                <div class="step step-2">
+                    <div class="form-group">
+                        <label for="Question1">Question 1</label>
+                        <input type="text" id="Question1" name="Question1">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer1a">Answer 1a</label>
+                        <input type="text" id="Answer1a" name="Answer1a">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer1b">Answer 1b</label>
+                        <input type="text" id="Answer1b" name="Answer1b">
+                    </div>    
+                    <div class="form-group">
+                        <label for="Answer1c">Answer 1c</label>
+                        <input type="text" id="Answer1c" name="Answer1c">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer1d">Answer 1d</label>
+                        <input type="text" id="Answer1d" name="Answer1d">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+
+                <div class="step step-3 ">
+                    <div class="form-group">
+                        <label for="Answer1a_Weights"> Weights for answer 1a</label>
+                        <input type="text" id="Answer1a_Weights" name="Answer1a_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer1b_Weights"> Weights for answer 1b</label>
+                        <input type="text" id="Answer1b_Weights" name="Answer1b_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer1c_Weights"> Weights for answer 1c</label>
+                        <input type="text" id="Answer1c_Weights" name="Answer1c_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer1d_Weights"> Weights for answer 1d</label>
+                        <input type="text" id="Answer1d_Weights" name="Answer1d_Weights">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="question-btn">Add Question</button>
+                    <button type="submit" class="submit-btn">Create</button>
+                </div>
+
+
+                <div class="step step-4">
+                    <div class="form-group">
+                        <label for="Question2">Question 2</label>
+                        <input type="text" id="Question2" name="Question2">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer2a">Answer 2a</label>
+                        <input type="text" id="Answer2a" name="Answer2a">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer2b">Answer 2b</label>
+                        <input type="text" id="Answer2b" name="Answer2b">
+                    </div>    
+                    <div class="form-group">
+                        <label for="Answer2c">Answer 2c</label>
+                        <input type="text" id="Answer2c" name="Answer2c">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer2d">Answer 2d</label>
+                        <input type="text" id="Answer2d" name="Answer2d">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+
+                <div class="step step-5 ">
+                    <div class="form-group">
+                        <label for="Answer2a_Weights"> Weights for answer 2a</label>
+                        <input type="text" id="Answer2a_Weights" name="Answer2a_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer2b_Weights"> Weights for answer 2b</label>
+                        <input type="text" id="Answer2b_Weights" name="Answer2b_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer2c_Weights"> Weights for answer 2c</label>
+                        <input type="text" id="Answer2c_Weights" name="Answer2c_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer2d_Weights"> Weights for answer 1d</label>
+                        <input type="text" id="Answer2d_Weights" name="Answer2d_Weights">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="question-btn">Add Question</button>
+                    <button type="submit" class="submit-btn">Create</button>
+                </div>
+
+                <div class="step step-6">
+                    <div class="form-group">
+                        <label for="Question3">Question 3</label>
+                        <input type="text" id="Question3" name="Question3">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer3a">Answer 3a</label>
+                        <input type="text" id="Answer3a" name="Answer3a">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer3b">Answer 3b</label>
+                        <input type="text" id="Answer3b" name="Answer3b">
+                    </div>    
+                    <div class="form-group">
+                        <label for="Answer3c">Answer 3c</label>
+                        <input type="text" id="Answer3c" name="Answer3c">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer3d">Answer 3d</label>
+                        <input type="text" id="Answer3d" name="Answer3d">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+
+                <div class="step step-7 ">
+                    <div class="form-group">
+                        <label for="Answer3a_Weights"> Weights for answer 3a</label>
+                        <input type="text" id="Answer3a_Weights" name="Answer3a_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer3b_Weights"> Weights for answer 3b</label>
+                        <input type="text" id="Answer3b_Weights" name="Answer3b_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer3c_Weights"> Weights for answer 3c</label>
+                        <input type="text" id="Answer3c_Weights" name="Answer3c_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer3d_Weights"> Weights for answer 3d</label>
+                        <input type="text" id="Answer3d_Weights" name="Answer3d_Weights">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="question-btn">Add Question</button>
+                    <button type="submit" class="submit-btn">Create</button>
+                </div>
+
+
+                <div class="step step-8">
+                    <div class="form-group">
+                        <label for="Question4">Question 4</label>
+                        <input type="text" id="Question4" name="Question4">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer4a">Answer 4a</label>
+                        <input type="text" id="Answer4a" name="Answer4a">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer4b">Answer 4b</label>
+                        <input type="text" id="Answer4b" name="Answer4b">
+                    </div>    
+                    <div class="form-group">
+                        <label for="Answer4c">Answer 4c</label>
+                        <input type="text" id="Answer4c" name="Answer4c">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer4d">Answer 4d</label>
+                        <input type="text" id="Answer4d" name="Answer4d">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+
+                <div class="step step-9 ">
+                    <div class="form-group">
+                        <label for="Answer4a_Weights"> Weights for answer 4a</label>
+                        <input type="text" id="Answer4a_Weights" name="Answer4a_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer4b_Weights"> Weights for answer 4b</label>
+                        <input type="text" id="Answer4b_Weights" name="Answer4b_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer4c_Weights"> Weights for answer 4c</label>
+                        <input type="text" id="Answer4c_Weights" name="Answer4c_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer4d_Weights"> Weights for answer 4d</label>
+                        <input type="text" id="Answer4d_Weights" name="Answer4d_Weights">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="question-btn">Add Question</button>
+                    <button type="submit" class="submit-btn">Create</button>
+                </div>
+
+
+                <div class="step step-10">
+                    <div class="form-group">
+                        <label for="Question5">Question 5</label>
+                        <input type="text" id="Question5" name="Question5">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer5a">Answer 5a</label>
+                        <input type="text" id="Answer5a" name="Answer5a">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer5b">Answer 5b</label>
+                        <input type="text" id="Answer5b" name="Answer5b">
+                    </div>    
+                    <div class="form-group">
+                        <label for="Answer5c">Answer 5c</label>
+                        <input type="text" id="Answer5c" name="Answer5c">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer5d">Answer 5d</label>
+                        <input type="text" id="Answer5d" name="Answer5d">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+
+                <div class="step step-9 ">
+                    <div class="form-group">
+                        <label for="Answer5a_Weights"> Weights for answer 5a</label>
+                        <input type="text" id="Answer5a_Weights" name="Answer5a_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer5b_Weights"> Weights for answer 5b</label>
+                        <input type="text" id="Answer5b_Weights" name="Answer5b_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer5c_Weights"> Weights for answer 5c</label>
+                        <input type="text" id="Answer5c_Weights" name="Answer5c_Weights">
+                    </div>
+                    <div class="form-group">
+                        <label for="Answer5d_Weights"> Weights for answer 5d</label>
+                        <input type="text" id="Answer5d_Weights" name="Answer5d_Weights">
+                    </div>
+                    <button type="button" class="previous-btn">Previous</button>
+                    <button type="submit" class="submit-btn">Create</button>
+                </div>
+
+
+            </form>
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="/scripts/firestore.js"></script>
+    <script src="/scripts/create.js"></script>
+    
+</body>
+</html>
