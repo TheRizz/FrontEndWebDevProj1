@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/validation.js" charset="ust-8"></script>
+    <script type = "module">
+        if(sessionStorage.getItem('auth') == "false"){
+            window.location = "login.html";
+        }
+    </script>
     <title>Home</title>
     <link rel="stylesheet" href="styles/home_style.css">
 </head>
