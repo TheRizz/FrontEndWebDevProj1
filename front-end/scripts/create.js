@@ -31,7 +31,10 @@ form.addEventListener('submit', (event)=>{
         const {name, value} = input;
         inputs.push({name, value})
     })
-    //console.log(inputs);
+
+    var firestore = new RemoteDataStore();
+    firestore.create(inputs);
+    
     form.reset();
     let index = 0;
     const active = document.querySelector('form .step.active');
