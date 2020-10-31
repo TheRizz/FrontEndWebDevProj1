@@ -8,5 +8,5 @@ function onLoad() {
 }
 
 function addQuiz(quiz) {
-    $(".QuizList").html("<a href='#'><li>"+quiz+"</li></a>");
+    $(".QuizList").append("<a href='#'><li>"+quiz+"</li></a>");
 }
