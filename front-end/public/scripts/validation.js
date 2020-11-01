@@ -4,6 +4,10 @@ Function currently reads in username and password and checks to see if the usern
 Output in console to check if username is in the db or not
 */
 
+if(sessionStorage.getItem('auth') == null){
+    sessionStorage.setItem('auth', 'false');
+}
+
 class Login{
     static username = "";
     static password = "";

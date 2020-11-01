@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scripts/validation.js" charset="ust-8"></script>
     <script type = "module">
-        if(sessionStorage.getItem('auth') == "false"){
+        if(sessionStorage.getItem('auth') != "true"){
             window.location = "login.html";
         }
     </script>
@@ -17,7 +17,15 @@
         <button class="btn btn-create">Create Quiz</button>
         <button class="btn btn-take">Take Quiz</button>
         <button class="btn btn-mine">My Quizzes</button>
-        <button class="btn btn-logoff">Log Off</button>
+        <button class="btn btn-logoff" onclick="Logout()">Log Off</button>
+        <script>
+            function Logout(){
+                sessionStorage.setItem('auth', 'false');
+                sessionStorage.setItem('user', '');
+                sessionStorage.setItem('pass', '');
+                window.location = 'login.html';
+            }
+        </script>
 
 </body>
 </html>
