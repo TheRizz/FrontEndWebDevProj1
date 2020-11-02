@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(../images/bgi.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+
+.container{
+    text-align: center;
+    color: white;
+}
+
+.container h1{
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: 55px;
+}
+
+.container p{
+    margin: 18px 0;
+
+}
+
+.input-group{
+    width: 90%;
+    max-width: 500px;
+    border-radius: 30px;
+    background: white;
+    margin: auto;
+    padding: 2px;
+}
+
+.form-control{
+    border: 0 !important;
+    border-radius: 30px !important;
+    margin: 2px;
+    box-shadow: none !important;
+}
+
+.input-group-text{
+    width: 100px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0 !important;
+    color: white !important;
+    padding: 0 25px !important;
+    border-radius: 30px !important;
+    box-shadow: none;
+
+}
+
+a{
+    font-size: 40px;
+    color: lightblue;
+}
+
+ul{
+    list-style: none;
+    overflow-y: auto;
+    height: 25em;
+    width: fit-content;
+    margin: auto;
+    padding: 0px 100px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c2c2c2;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}

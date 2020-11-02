@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title >This is the Quiz Name</title>
+	<link rel="stylesheet" href="/styles/quiz_form.css">
+
+
+</head>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<h1 class="quiz_name">This is the Quiz Name </h1>
+		</div>
+		<form id="form1">
+
+			<!-- <h2 id="q1">This would be Question 1</h2> -->
+			<!-- <label for="ans_1a"><input type="radio" name="answer1" value="0" id="ans_1a" />This would be answer 1A</label> -->
+			<!-- <label for="ans_1b"><input type="radio" name="answer1" value="0" id="ans_1b" />This would be answer 1b</label>
+			<label for="ans_1c"><input type="radio" name="answer1" value="0" id="ans_1c" />This would be answer 1c</label>
+			<label for="ans_1d"><input type="radio" name="answer1" value="0" id="ans_1d" />This would be answer 1d</label> -->
+
+		<!--	<h2 id="q2">This would be Question 2</h2>
+			<label for="ans_2a"><input type="radio" name="answer2" value="0" id="ans_2a" />This would be answer 2A</label>
+			<label for="ans_2b"><input type="radio" name="answer2" value="0" id="ans_2b" />This would be answer 2b</label>
+			<label for="ans_2c"><input type="radio" name="answer2" value="0" id="ans_2c" />This would be answer 2c</label>
+			<label for="ans_2d"><input type="radio" name="answer2" value="0" id="ans_2d" />This would be answer 2d</label>
+			
+			<h2 id="q3">This would be Question 3</h2>
+			<label for="ans_3a"><input type="radio" name="answer3" value="0" id="ans_3a" />This would be answer 3A</label>
+			<label for="ans_3b"><input type="radio" name="answer3" value="0" id="ans_3b" />This would be answer 3b</label>
+			<label for="ans_3c"><input type="radio" name="answer3" value="0" id="ans_3c" />This would be answer 3c</label>
+			<label for="ans_3d"><input type="radio" name="answer3" value="0" id="ans_3d" />This would be answer 3d</label>
+			
+			<h2 id="q4">This would be Question 4</h2>
+			<label for="ans_4a"><input type="radio" name="answer4" value="0" id="ans_4a" />This would be answer 4A</label>
+			<label for="ans_4b"><input type="radio" name="answer4" value="0" id="ans_4b" />This would be answer 4b</label>
+			<label for="ans_4c"><input type="radio" name="answer4" value="0" id="ans_4c" />This would be answer 4c</label>
+			<label for="ans_4d"><input type="radio" name="answer4" value="0" id="ans_4d" />This would be answer 4d</label>
+			
+			<h2 id="q5">This would be Question 5</h2>
+			<label for="ans_5a"><input type="radio" name="answer5" value="0" id="ans_5a" />This would be answer 5A</label>
+			<label for="ans_5b"><input type="radio" name="answer5" value="0" id="ans_5b" />This would be answer 5b</label>
+			<label for="ans_5c"><input type="radio" name="answer5" value="0" id="ans_5c" />This would be answer 5c</label>
+			<label for="ans_5d"><input type="radio" name="answer5" value="0" id="ans_5d" />This would be answer 5d</label>-->
+
+
+			<button type="button" value="Home" onclick="window.location = 'home.html';">Home</button>
+
+		</form>
+
+		<p id = "char">Your charcter is: <span id="grade">__</span></p>
+		<p id="grade2"></p>
+
+		<ul class=QuizList>
+		</ul>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="/__/firebase/7.24.0/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="/__/firebase/7.24.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+
+    <script src="/__/firebase/init.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="/scripts/firestore.js"></script>
+		<script src="/scripts/quiz_form.js"></script>
+	</div>
+</body>
+
+</html>
