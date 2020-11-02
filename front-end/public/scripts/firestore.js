@@ -68,10 +68,10 @@ async function get(key) {
 
 async function getAll() {
     console.log('Retrieving all quizzes');
-    firebase.firestore().collection("Quizzes").get().then(function (querySnapshot) {
+    await firebase.firestore().collection("Quizzes").get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             addQuiz(doc.id);
-            console.log(doc.id, " => ", doc.data());
+            //console.log(doc.id, " => ", doc.data());
         });
     });
 }

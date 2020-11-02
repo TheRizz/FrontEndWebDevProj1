@@ -6,7 +6,8 @@ const form = document.querySelector('form');
 
 async function checkQuizName(quizName) {
     var valid = false;
-    await firebase.firestore().collection('Quizzes').where('nameCheck', '==', quizName.toLowerCase())
+    var newName = toString(quizName).toLowerCase();
+    await firebase.firestore().collection('Quizzes').where('nameCheck', '==', newName)
         .get()
         .then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {

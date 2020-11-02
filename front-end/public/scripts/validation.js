@@ -52,12 +52,12 @@ async function TryCreateNewAccount(username, password, emailaddress) {
         return false;
     } else {
         console.log("Username not yet taken");
-        window.alert("Account successfully created");
         firebase.firestore().collection('accounts').add({
             "username": username.toLowerCase(),
             "password": password,
             "email": emailaddress
         });
+        window.alert("Account successfully created");
         return true;
     }
 }
@@ -83,7 +83,7 @@ async function CheckPassword(username, password) {
         });
 
     if (valid) {
-        //console.log("Username found");
+        console.log("Username found");
         return true;
     } else {
         //console.log("Username not found");
