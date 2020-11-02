@@ -11,13 +11,13 @@ class RemoteDataStore {
                 appId: "1:520198273160:web:3a3cece94043440c30873d",
                 measurementId: "G-LMEFDW9G7D"
             };
-        
+
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
-        }    
-        
+        }
+
         console.log('Constructing the Firestore handler');
-        this.db = firebase.firestore();   
+        this.db = firebase.firestore();
     }
 
     create(inputs) {
@@ -35,14 +35,16 @@ class RemoteDataStore {
                 'Character3': inputs[3]['value'],
                 'Character4': inputs[4]['value'],
             }
-        }, { merge: true });
+        }, {
+            merge: true
+        });
 
         for (var i = 5; i < inputs.length; i += 9) {
             if (inputs[i]['value'] != '') {
                 var questionName = inputs[i]['name'];
 
                 quizRef.doc(quizName).set({
-                    [questionName] : {
+                    [questionName]: {
                         'Question': inputs[i]['value'],
                         'Answers': {
                             'AnswerA': inputs[i + 1]['value'],
@@ -57,16 +59,18 @@ class RemoteDataStore {
                             'WeightD': inputs[i + 8]['value'],
                         },
                     }
-                }, { merge: true });
+                }, {
+                    merge: true
+                });
             }
-        }        
+        }
     }
 
 
     remove(key) {
         const quizRef = this.db.collection('Quizzes');
         quizRef.doc(key).delete().then(() => console.log("Quiz ", key, " deleted"))
-        .catch((error) => console.error("Error deleting document", error));
+            .catch((error) => console.error("Error deleting document", error));
     }
 
     async get(key) {
@@ -81,7 +85,7 @@ class RemoteDataStore {
         }
     }
 
-    async getAll() {
+    getAll() {
         console.log('Retrieving all quizzes');
         this.db.collection("Quizzes").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
