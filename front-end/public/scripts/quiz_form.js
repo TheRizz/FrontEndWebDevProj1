@@ -20,7 +20,8 @@ async function displayQuiz() {
     var label;
     var question;
     var form = document.getElementById('form1');
-    docRef = await get(quizName);
+    // hardcoded quiz
+    docRef = await get("Jake's Quiz");
     console.log(docRef);
     $(".quiz_name").text(docRef.Name);
 
@@ -292,4 +293,58 @@ async function displayQuiz() {
     label.value = "Submit";
     label.innerHTML = "Submit";
     form.appendChild(label);
+}
+
+async function calcResult() {
+    // hardcoded quiz
+    var docRef = await get("Jake's Quiz");
+    $(".quiz_name").text(docRef.Name);
+
+    var numToLet = ['A', 'B', 'C', 'D'];
+    var totalWeights = [];
+    var currentAnswer = 1;
+    var radios = document.getElementsByName('answer' + currentAnswer.toString());
+
+    while (radios.length > 0) {
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                var question = "Question" + (totalWeights.length + 1).toString();
+                var weight = "Weight" + numToLet[i];
+                totalWeights.push(docRef[question]['Weights'][weight]);
+            }
+        }
+
+        currentAnswer++;
+        radios = document.getElementsByName('answer' + currentAnswer.toString());
+    }
+
+    var results = [0.0, 0.0, 0.0, 0.0];
+
+    for (var i = 0; i < totalWeights.length; i++) {
+        var subWeights = totalWeights[i].split(',');
+
+        for (var j = 0; j < subWeights.length; j++) {
+            results[j] += parseFloat(subWeights[j]);
+        }
+    }
+
+    return docRef["Characters"]["Character" + indexOfMax(results).toString()];
+}
+
+function indexOfMax(arr) {
+    if (arr.length === 0) {
+        return -1;
+    }
+
+    var max = arr[0];
+    var maxIndex = 0;
+
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            maxIndex = i;
+            max = arr[i];
+        }
+    }
+
+    return maxIndex;
 }
