@@ -1,6 +1,7 @@
 # CPSC 349 Fall 2020 Project #1
 
-![Homepage](https://i.imgur.com/dvB637h.png)
+## Presentation
+[![Presentation](https://i.imgur.com/dvB637h.png)](https://www.youtube.com/watch?v=S6MxF7szsys)
 
 ## Group Members
 Ivan Parrales, Kyle Slater, Ryan Martinez, and Jake Sichley
