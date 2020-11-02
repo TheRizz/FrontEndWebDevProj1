@@ -4,35 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quizzes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/take.css">
     <script src="scripts/validation.js" charset="ust-8"></script>
     <script type="module">
         if(sessionStorage.getItem('auth') != "true"){
             window.location = "login.html";
         }
     </script>
-    <title>Home</title>
-    <link rel="stylesheet" href="styles/home_style.css">
 </head>
 
 <body>
+    <div class="hero">
 
-    <button class="btn btn-create" onclick="window.location = 'create.html'">Create Quiz</button>
-    <button class="btn btn-take" onclick="showQuizzes()"> Take Quiz</button>
-    <button class="btn btn-mine">My Quizzes</button>
-    <button class="btn btn-logoff" onclick="Logout()">Log Off</button>
-    <script>
-        function Logout() {
-            sessionStorage.setItem('auth', 'false');
-            sessionStorage.setItem('user', '');
-            sessionStorage.setItem('pass', '');
-            window.location = 'login.html';
-        }
-
-        function showQuizzes() {
-            window.location = 'take.html';
-        }
-    </script>
-
+        <section class="container">
+            <h1>Take a 'Which Character Are You?' Quiz</h1>
+            <ul class=QuizList>
+            </ul>
+        </section>
+    </div>
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="/__/firebase/7.24.0/firebase-app.js"></script>
 
@@ -44,6 +35,13 @@
     <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
 
     <script src="/__/firebase/init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="scripts/browse.js"></script>
+    <script src="scripts/firestore.js"></script>
+    <script>
+        onLoad();
+    </script>
+
 </body>
 
 </html>

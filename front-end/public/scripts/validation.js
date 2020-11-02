@@ -52,6 +52,7 @@ async function TryCreateNewAccount(username, password, emailaddress) {
         return false;
     } else {
         console.log("Username not yet taken");
+        window.alert("Account successfully created");
         firebase.firestore().collection('accounts').add({
             "username": username.toLowerCase(),
             "password": password,
