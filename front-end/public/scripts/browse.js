@@ -4,9 +4,9 @@ async function getQuizzes(){
     sessionStorage.setItem('quizzes', snapshot.docs.map(doc => doc.data()));
 }
 
-async function onLoad() {
+async function onLoad(qtype) {
     //var firestore = new RemoteDataStore();
-    await getAll();
+    await getAll(qtype);
 }
 
 function addQuiz(quiz) {

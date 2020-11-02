@@ -7,6 +7,13 @@ function create(inputs) {
     });
     quizRef.doc(quizName).set({
         'NameCheck': quizName.toLowerCase(),
+    }, {
+        merge: true
+    });
+    quizRef.doc(quizName).set({
+        'Creator': sessionStorage.getItem('user').toLowerCase(),
+    }, {
+        merge: true
     });
 
     quizRef.doc(quizName).set({
@@ -66,7 +73,9 @@ async function get(key) {
     }
 }
 
-async function getAll() {
+async function getAll(qtype) {
+    //var quiztype = await qtype.toString();
+    if(sessionStorage.getItem('qtype') == "all"){
     console.log('Retrieving all quizzes');
     await firebase.firestore().collection("Quizzes").get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
@@ -74,4 +83,13 @@ async function getAll() {
             //console.log(doc.id, " => ", doc.data());
         });
     });
+} else{
+    console.log('Retrieving My quizzes');
+    await firebase.firestore().collection("Quizzes").where('Creator', '==', sessionStorage.getItem('user')).get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            addQuiz(doc.id);
+            //console.log(doc.id, " => ", doc.data());
+        });
+    });
+}
 }

@@ -287,4 +287,9 @@ async function displayQuiz() {
             form.appendChild(label);
         }
     }
+
+    label = document.createElement("button");
+    label.value = "Submit";
+    label.innerHTML = "Submit";
+    form.appendChild(label);
 }

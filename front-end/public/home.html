@@ -18,7 +18,7 @@
 
     <button class="btn btn-create" onclick="window.location = 'create.html'">Create Quiz</button>
     <button class="btn btn-take" onclick="showQuizzes()"> Take Quiz</button>
-    <button class="btn btn-mine">My Quizzes</button>
+    <button class="btn btn-mine" onclick="showMyQuizzes()">My Quizzes</button>
     <button class="btn btn-logoff" onclick="Logout()">Log Off</button>
     <script>
         function Logout() {
@@ -28,7 +28,13 @@
             window.location = 'login.html';
         }
 
+        function showMyQuizzes() {
+            sessionStorage.setItem('qtype', "mine");
+            window.location = 'take.html';
+        }
+
         function showQuizzes() {
+            sessionStorage.setItem('qtype', "all");
             window.location = 'take.html';
         }
     </script>
