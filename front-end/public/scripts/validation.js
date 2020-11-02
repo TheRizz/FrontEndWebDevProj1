@@ -49,6 +49,7 @@ async function TryCreateNewAccount(username, password, emailaddress) {
 
     if (check) {
         console.log("Username already taken");
+        window.alert("Username already taken");
         return false;
     } else {
         console.log("Username not yet taken");
@@ -58,6 +59,7 @@ async function TryCreateNewAccount(username, password, emailaddress) {
             "email": emailaddress
         });
         window.alert("Account successfully created");
+        TryFullLogin(username, password);
         return true;
     }
 }

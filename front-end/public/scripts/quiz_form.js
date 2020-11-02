@@ -21,8 +21,9 @@ async function displayQuiz() {
     var question;
     var form = document.getElementById('form1');
     // hardcoded quiz
-    docRef = await get("Jake's Quiz");
-    console.log(docRef);
+    //docRef = await get("Jake's Quiz");
+    docRef = await get(quizName);
+    //console.log(docRef);
     $(".quiz_name").text(docRef.Name);
 
     //Question1
@@ -290,14 +291,24 @@ async function displayQuiz() {
     }
 
     label = document.createElement("button");
-    label.value = "Submit";
+    label.value = "button";
+    label.type = "button";
     label.innerHTML = "Submit";
+    label.onclick = function(){
+        updateCharacter();
+    };
     form.appendChild(label);
+}
+
+async function updateCharacter(){
+    var char = await calcResult();
+    document.getElementById("grade").innerHTML = char;
+
 }
 
 async function calcResult() {
     // hardcoded quiz
-    var docRef = await get("Jake's Quiz");
+    var docRef = await get(quizName);
     $(".quiz_name").text(docRef.Name);
 
     var numToLet = ['A', 'B', 'C', 'D'];
@@ -328,7 +339,7 @@ async function calcResult() {
         }
     }
 
-    return docRef["Characters"]["Character" + indexOfMax(results).toString()];
+    return docRef["Characters"]["Character" + (indexOfMax(results) + 1).toString()];
 }
 
 function indexOfMax(arr) {
